@@ -6,7 +6,8 @@
 
     <bean id="user" class="com.zr.spring.injection.bean.UserBean">
         <!-- collaborators and configuration for this bean go here -->
-        <property name="name" value="zhangrui"/>
+        <property name="name" value="无敌瑞"/>
+        <property name="pwd" value="123456"/>
         <property name="age" value="30"/>
     </bean>
 

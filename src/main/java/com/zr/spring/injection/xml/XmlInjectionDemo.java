@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class XmlInjectionDemo {
 	public static void main(String[] args) {
 		//1.获取spring上下文配置文件
-		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:META-INF/userBean.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:META-INF/user-bean.xml");
 		//2.获取对象,依赖的来源 自定义bean
 		UserBean user = context.getBean("user", UserBean.class);
 		System.out.println(user);
