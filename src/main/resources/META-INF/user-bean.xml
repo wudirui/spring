@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="com.zr.spring.injection.bean.UserBean">
+    <bean id="user" class="com.zr.spring.bean.UserBean">
         <!-- collaborators and configuration for this bean go here -->
         <property name="name" value="无敌瑞"/>
         <property name="pwd" value="123456"/>

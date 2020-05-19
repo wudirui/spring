@@ -1,6 +1,6 @@
 package com.zr.spring.injection.xml;
 
-import com.zr.spring.injection.bean.UserBean;
+import com.zr.spring.bean.UserBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

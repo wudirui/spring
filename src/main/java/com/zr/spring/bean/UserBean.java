@@ -1,9 +1,27 @@
-package com.zr.spring.injection.bean;
+package com.zr.spring.bean;
+
+import org.springframework.core.io.Resource;
+
+import java.util.List;
+import java.util.Properties;
 
 public class UserBean {
 	String name;
 	String pwd;
 	int age;
+	private City city;
+
+	private City[] workCities;
+
+	private List<City> lifeCities;
+
+	private Resource configFileLocation;
+
+	private Company company;
+
+	private Properties context;
+
+	private String contextAsText;
 
 	public String getName() {
 		return name;

@@ -1,6 +1,6 @@
-package com.zr.spring.injection.repository;
+package com.zr.spring.repository;
 
-import com.zr.spring.injection.bean.UserBean;
+import com.zr.spring.bean.UserBean;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;

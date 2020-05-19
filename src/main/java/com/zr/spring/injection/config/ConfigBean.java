@@ -1,6 +1,6 @@
 package com.zr.spring.injection.config;
 
-import com.zr.spring.injection.bean.UserBean;
+import com.zr.spring.bean.UserBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

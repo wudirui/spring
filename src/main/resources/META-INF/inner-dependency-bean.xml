@@ -9,7 +9,7 @@
 
 
     <import resource="user-bean.xml"/>
-    <bean id="userRepository" class="com.zr.spring.injection.repository.UserRepository" autowire="byType">
+    <bean id="userRepository" class="com.zr.spring.repository.UserRepository" autowire="byType">
         <property name="userBeanList">
             <util:list>
                 <ref bean="user"/>
