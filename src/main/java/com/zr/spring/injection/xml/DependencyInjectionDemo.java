@@ -1,4 +1,4 @@
-package com.zr.spring.injection;
+package com.zr.spring.injection.xml;
 
 import com.zr.spring.injection.bean.UserBean;
 import org.springframework.context.ApplicationContext;
