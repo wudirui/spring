@@ -1,6 +1,7 @@
 package com.zr.spring.injection.annotation;
 
 import com.zr.spring.injection.bean.UserBean;
+import com.zr.spring.injection.config.ConfigBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class AnnotationInjectDemo {
