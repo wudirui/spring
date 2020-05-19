@@ -1,10 +1,11 @@
 package com.zr.spring.lookup;
 
+import com.zr.spring.bean.UserBean;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.context.ApplicationContext;
+import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import com.zr.spring.bean.UserBean;
 
 import java.util.Map;
 
@@ -20,20 +21,47 @@ public class DependencyLookup {
 		// 通过注解查找对象
 		lookupByAnnotationType(beanFactory);
 
-//        lookupInRealTime(beanFactory);
-//        lookupInLazy(beanFactory);
+		lookupInRealTime(beanFactory);
+
+		lookupInLazy(beanFactory);
 
 
+	}
+
+	/**
+	 * 懒加载
+	 *
+	 * @param beanFactory
+	 */
+	private static void lookupInLazy(BeanFactory beanFactory) {
+		ObjectFactory<UserBean> objectFactory = (ObjectFactory<UserBean>) beanFactory.getBean("objectFactory");
+		UserBean user = objectFactory.getObject();
+		System.out.println("延迟查找：" + user);
+	}
+
+	/**
+	 * 实时查找
+	 *
+	 * @param beanFactory
+	 */
+	private static void lookupInRealTime(BeanFactory beanFactory) {
+		UserBean user = (UserBean) beanFactory.getBean("user");
+		System.out.println(user);
 	}
 
 	private static void lookupByAnnotationType(BeanFactory beanFactory) {
 		if (beanFactory instanceof ListableBeanFactory) {
 			ListableBeanFactory listableBeanFactory = (ListableBeanFactory) beanFactory;
-			//listableBeanFactory.getBeansWithAnnotation("".getClass());
+			Map<String, Object> beans = listableBeanFactory.getBeansWithAnnotation(Bean.class);
+			System.out.println(beans);
 		}
 	}
 
-	/**/
+	/**
+	 * 按照类型查找所有的对象
+	 *
+	 * @param beanFactory
+	 */
 	private static void lookupCollectionByType(BeanFactory beanFactory) {
 		if (beanFactory instanceof ListableBeanFactory) {
 			ListableBeanFactory listableBeanFactory = (ListableBeanFactory) beanFactory;
@@ -42,6 +70,11 @@ public class DependencyLookup {
 		}
 	}
 
+	/**
+	 * 按照类型查找
+	 *
+	 * @param beanFactory
+	 */
 	private static void lookupByType(BeanFactory beanFactory) {
 		UserBean bean = beanFactory.getBean(UserBean.class);
 		System.out.println(bean);

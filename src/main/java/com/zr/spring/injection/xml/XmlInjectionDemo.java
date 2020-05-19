@@ -15,5 +15,4 @@ public class XmlInjectionDemo {
 		UserBean user = context.getBean("user", UserBean.class);
 		System.out.println(user);
 	}
-
 }
