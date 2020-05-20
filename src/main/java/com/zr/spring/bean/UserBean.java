@@ -10,9 +10,7 @@ public class UserBean {
 	String pwd;
 	int age;
 	private City city;
-
 	private City[] workCities;
-
 	private List<City> lifeCities;
 
 	private Resource configFileLocation;
