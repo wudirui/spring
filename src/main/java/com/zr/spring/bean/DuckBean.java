@@ -3,8 +3,8 @@ package com.zr.spring.bean;
 /**
  * 懒加载实例
  */
-public class Duck {
-    public Duck() {
+public class DuckBean {
+    public DuckBean() {
         System.out.println("============duck 诞生了==============");
     }
 

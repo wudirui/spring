@@ -4,8 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="duck" class="com.zr.spring.bean.DuckBean" lazy-init="true"/>
-    <bean id="dog" class="com.zr.spring.bean.Dog" lazy-init="false"/>
+    <bean id="lifecycle" class="com.zr.spring.bean.LifecycleBean" init-method="init" destroy-method="destroy">
+        <property name="message" value="hello world i am the lifecycle bean"/>
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
 
     <!-- more bean definitions go here -->
 
