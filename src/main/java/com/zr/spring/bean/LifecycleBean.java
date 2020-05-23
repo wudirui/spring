@@ -20,5 +20,4 @@ public class LifecycleBean {
     public void destroy() {
         System.out.println("LifecycleBean will destroy now");
     }
-
 }
