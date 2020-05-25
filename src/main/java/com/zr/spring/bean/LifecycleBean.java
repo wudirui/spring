@@ -16,7 +16,6 @@ public class LifecycleBean {
     public void init() {
         System.out.println("LifecycleBean is going through init");
     }
-
     public void destroy() {
         System.out.println("LifecycleBean will destroy now");
     }

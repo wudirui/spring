@@ -32,7 +32,6 @@ public class PropertiesMetadataDemo {
         // 启动 Spring 应用上下文
         context.refresh();
         // beanName 和 bean 映射
-
         Map<String, UserBean> usersMap = context.getBeansOfType(UserBean.class);
         for (Map.Entry<String, UserBean> entry : usersMap.entrySet()) {
             System.out.printf("User Bean name : %s , content : %s \n", entry.getKey(), entry.getValue());
